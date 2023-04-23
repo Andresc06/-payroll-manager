@@ -2,8 +2,7 @@
 
 The code uses HTML and CSS to create the forms. There are three CSS files included in the code to style the page.
 
-It uses a JSON as a database, that means that when you reload the page, every employee and concept that you've created is deleted. That being said, its principal utility
-is to facilitate to managers to make a payroll of each worker in a company.
+Its principal utility is to facilitate to managers to make payrolls to each worker in a company. That being said, it uses a JSON as a database, that means that when you reload the page, every employee and concept that you've created is deleted.
 
 It's remarkable to say that it shows only one table at the time (employees, concepts, payroll) using CSS and JS properties.
 
