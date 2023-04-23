@@ -1,0 +1,110 @@
+.dropdown {
+    min-width: 15em;
+    position: relative;
+    margin-bottom: 0.8em;
+}
+
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.select {
+    background: #2a2f3b;
+    color: #fff;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 0.7em 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: relative;
+}
+
+.select_clicked {
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover {
+    background: #323741;
+}
+
+.selected {
+    font-weight: 600;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px transparent solid;
+    border-right: 5px transparent solid;
+    border-top: 6px #fff solid; 
+    transition: 0.3s;
+    position: absolute;
+    top: 42%;
+    left: 90%;
+}
+
+.arrow_rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(6, 7, 53, 0.4);
+    border-radius: 0.5em;
+    color: #c3c7d3;
+    font-weight: 500;
+    position: absolute;
+    top: 5.4em;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.radio  {
+    display: none;
+}
+
+.menu li {
+    margin: 0.3em 0;
+}
+
+.menu label {
+    display: block;
+    padding: 0.7em 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu label:hover {
+    background: #2a2d35;
+}
+
+.active {
+    background: #23242a;
+}
+
+.menu_open {
+    max-height: 15em;
+    display: block;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.menu_open::-webkit-scrollbar {
+    width: 0.3em;
+    background: #0e1013;
+    border-radius: 0 0.5em 0.5em 0;
+}
+
+.menu_open::-webkit-scrollbar-thumb {
+    background: #757b83;
+    border-radius: 0 0.5em 0.5em 0;
+}

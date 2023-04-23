@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="dropdown.css" />
+		<link rel="stylesheet" href="forms.css" />
+	</head>
+	<body>
+		<section class="forms_container">
+			<div class="form_menu">
+				<div class="form_select">
+					<h1>Create Employee</h1>
+					<div class="arrow"></div>
+				</div>
+				<form class="form" id="employee_form" autocomplete="off">
+					<div class="dropdown">
+						<p>Position</p>
+						<div class="select">
+							<span class="selected">Select position</span>
+							<div class="arrow"></div>
+						</div>
+						<ul class="menu">
+							<li>
+								<label for="ceo">
+									<input
+										type="radio"
+										id="ceo"
+										name="position"
+										value="Chief Executive Officer"
+										class="radio"
+									/>
+									Chief Executive Officer (CEO)
+								</label>
+							</li>
+							<li>
+								<label for="marketing_manager">
+									<input
+										type="radio"
+										id="marketing_manager"
+										name="position"
+										value="Marketing Manager"
+										class="radio"
+									/>
+									Marketing Manager
+								</label>
+							</li>
+							<li>
+								<label for="product_manager">
+									<input
+										type="radio"
+										id="product_manager"
+										name="position"
+										value="Product Manager"
+										class="radio"
+									/>
+									Product Manager
+								</label>
+							</li>
+							<li>
+								<label for="supervisor">
+									<input
+										type="radio"
+										id="supervisor"
+										name="position"
+										value="Supervisor"
+										class="radio"
+									/>
+									Supervisor
+								</label>
+							</li>
+							<li>
+								<label for="sales_manager">
+									<input
+										type="radio"
+										id="sales_manager"
+										name="position"
+										value="Sales Manager"
+										class="radio"
+									/>
+									Sales Manager
+								</label>
+							</li>
+							<li>
+								<label for="financial_manager">
+									<input
+										type="radio"
+										id="financial_manager"
+										name="position"
+										value="Financial Manager"
+										class="radio"
+									/>
+									Financial Manager
+								</label>
+							</li>
+							<li>
+								<label for="office-employee">
+									<input
+										type="radio"
+										id="office-employee"
+										name="position"
+										value="Office Employee"
+										class="radio"
+									/>
+									Office Employee
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="inputs">
+						<p><label for="employee_name">Name</label></p>
+						<input
+							type="text"
+							id="employee_name"
+							name="employee_name"
+						/>
+
+						<p><label for="lastname">Last name</label></p>
+						<input type="text" id="lastname" name="user_lastname" />
+
+						<p><label for="address">Street Address</label></p>
+						<input type="text" id="address" name="user_address" />
+
+						<p><label for="phone">Phone Number</label></p>
+						<input type="text" id="phone" name="user_phone" />
+
+						<p><label for="mail">E-mail</label></p>
+						<input type="email" id="mail" name="user_email" />
+
+						<p><label for="ci">ID</label></p>
+						<input type="text" id="ci" name="user_ci" />
+					</div>
+
+					<button type="submit">Create employee</button>
+				</form>
+			</div>
+			<div class="form_menu">
+				<div class="form_select">
+					<h1>Create Concept</h1>
+					<div class="arrow"></div>
+				</div>
+				<form class="form" id="concept_form" autocomplete="off">
+					<div class="inputs">
+						<p><label for="concept_name">Name</label></p>
+						<input
+							type="text"
+							id="concept_name"
+							name="concept_name"
+						/>
+
+						<div class="dropdown">
+							<p>Type</p>
+							<div class="select">
+								<span class="selected">Select type</span>
+								<div class="arrow"></div>
+							</div>
+							<ul class="menu">
+								<li>
+									<label for="payout">
+										<input
+											type="radio"
+											id="payout"
+											name="concept_type"
+											value="payout"
+											class="radio"
+										/>
+										Payout
+									</label>
+								</li>
+								<li>
+									<label for="discount">
+										<input
+											type="radio"
+											id="discount"
+											name="concept_type"
+											value="discount"
+											class="radio"
+										/>
+										Discount
+									</label>
+								</li>
+							</ul>
+						</div>
+
+						<div class="dropdown">
+							<p>Mode</p>
+							<div class="select">
+								<span class="selected">Select mode</span>
+								<div class="arrow"></div>
+							</div>
+							<ul class="menu">
+								<li>
+									<label for="quantity_btn">
+										<input
+											type="radio"
+											id="quantity_btn"
+											name="concept_mode"
+											onclick="setQuantity(0)"
+											value="qty"
+											class="radio"
+										/>
+										Quantity
+									</label>
+								</li>
+								<li>
+									<label for="percentage_btn">
+										<input
+											type="radio"
+											id="percentage_btn"
+											name="concept_mode"
+											onclick="setQuantity(1)"
+											value="ptg"
+											class="radio"
+										/>
+										Percentage
+									</label>
+								</li>
+							</ul>
+						</div>
+
+						<p><label for="quantity">Quantity</label></p>
+						<input
+							type="number"
+							step="1"
+							id="quantity"
+							name="concept_qty"
+							class="mode"
+							disabled
+						/>
+
+						<p><label for="percentage">Percentage</label></p>
+						<input
+							type="number"
+							step="1"
+							id="percentage"
+							name="concept_qty"
+							class="mode"
+							disabled
+						/>
+
+						<p><label for="description">Description</label></p>
+						<input
+							type="text"
+							id="description"
+							name="concept_des"
+						/>
+					</div>
+					<button type="submit">Create concept</button>
+				</form>
+			</div>
+			<div class="form_menu">
+				<div class="form_select">
+					<h1>Assign Concepts</h1>
+					<div class="arrow"></div>
+				</div>
+				<form class="form" id="assign_form" autocomplete="off">
+					<p><label for="employee_id">Employee ID</label></p>
+					<input type="number" id="employee_id" name="employee_id" />
+
+					<p><label for="concept_id">Concept ID</label></p>
+					<input type="number" id="concept_id" name="concept_id" />
+					<button type="submit">Assign concept</button>
+				</form>
+			</div>
+		</section>
+		<section class="data">
+			<div class="table_btns">
+				<input
+					type="button"
+					value="See Employee"
+					onclick="showTable(1)"
+				/>
+				<input
+					type="button"
+					value="See Concepts"
+					onclick="showTable(2)"
+				/>
+				<input
+					type="button"
+					value="See Payroll"
+					onclick="showTable(3)"
+				/>
+			</div>
+			<div id="view">
+				<table id="table1">
+					<thead>
+						<tr>
+							<th>CI</th>
+							<th>Name</th>
+							<th>Last Name</th>
+							<th>Position</th>
+							<th>Email</th>
+							<th>Street Address</th>
+							<th>Phone</th>
+						</tr>
+					</thead>
+				</table>
+
+				<table id="table2">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Type</th>
+							<th>Mode</th>
+							<th>Amount</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+				</table>
+
+				<table id="table3"></table>
+			</div>
+		</section>
+		<script src="main.js"></script>
+	</body>
+</html>
