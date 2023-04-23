@@ -8,48 +8,9 @@ let positions = [
   { id: 7, name: "Office Employee", salary: 30000 },
 ];
 
-let employees = [
-  // {
-  //   id: "29929768",
-  //   name: "Diego",
-  //   lastname: "Rincón",
-  //   addr: "El Doral",
-  //   tlfn: "04146890212",
-  //   email: "diegorinconf1@gmail.com",
-  //   position: "Chief Executive Officer",
-  //   concepts: []
-  // },
-  // {
-  //   id: "29929755",
-  //   name: "Andrés",
-  //   lastname: "Contreras",
-  //   addr: "Delicias",
-  //   tlfn: "04126869854",
-  //   email: "andrescontreras@gmail.com",
-  //   position: "Marketing Manager",
-  //   concepts: []
-  // }
-];
+let employees = [];
 
-let concepts = [
-  // {
-  //   id: "1",
-  //   name: "Vacaciones",
-  //   type: "payout",
-  //   mode: "qty",
-  //   amount: "50",
-  //   description: "Bono para vacaciones"
-  // },
-  // {
-  //   id: "2",
-  //   name: "Penalización",
-  //   type: "discount",
-  //   mode: "ptg",
-  //   amount: "50",
-  //   description: "Penalización por no asistir"
-  // }
-
-]
+let concepts = []
 
 function setQuantity(chosen) {
   let modes = document.getElementsByClassName("mode");
